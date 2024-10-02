@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "nourishnet";
+$username = "root";  // Your MySQL root username
+$password = "";  // Your root password
+$dbname = "CAT1";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,6 +11,5 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-
-
+echo "Connected successfully";
+?>

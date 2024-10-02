@@ -1,3 +1,4 @@
+<?php
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,7 @@
     <h2>Register</h2>
 
     <?php
-    include 'db_connect.php';  // Ensure this file connects to your database correctly
+    include 'db_connect.php';
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the submitted username and password
         $username = $_POST['username'];
@@ -18,23 +19,12 @@
         if (empty($username) || empty($password)) {
             echo "Please fill in both fields.";
         } else {
-            // Hash the password
-            $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-
-            // Insert user data into the database
-            $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param("ss", $username, $hashed_password);
-
-            if ($stmt->execute()) {
-                echo "Registration successful! <br>";
-                echo "Username: " . htmlspecialchars($username) . "<br>";
-            } else {
-                echo "Error: Could not register user.";
-            }
-
-            $stmt->close();
-            $conn->close();
+            // In a real application, you would hash the password and save the user data to a database
+            // Example: password_hash($password, PASSWORD_BCRYPT);
+            // For now, we'll just display the submitted information
+            echo "Registration successful! <br>";
+            echo "Username: " . htmlspecialchars($username) . "<br>";
+            echo "Password: " . htmlspecialchars($password) . "<br>";
         }
     }
     ?>

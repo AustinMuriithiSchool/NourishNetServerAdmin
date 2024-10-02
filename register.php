@@ -8,6 +8,9 @@
     <h2>Register</h2>
 
     <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    
     include 'db_connect.php';  // Ensure this file connects to your database correctly
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the submitted username and password

@@ -1,14 +1,13 @@
-<?php
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Register</title>
 </head>
 <body>
-
-    <h2>Register</h2>
-
-    <?php
+<h2>Register</h2>
+</body>
+<?php
     include 'db_connect.php';
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the submitted username and password

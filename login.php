@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $username;
 
             // Redirect to user dashboard or home page
-            header("Location: user_dashboard.php");
+            header("goodlogin.php");
             exit();
         } else {
             echo "Invalid password.";

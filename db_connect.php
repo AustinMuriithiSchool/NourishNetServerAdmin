@@ -1,5 +1,5 @@
 <?php
-$servername = "127.0.0.1";
+$servername = "102.37.157.159";
 $username = "root";  // Your MySQL root username
 $password = "@U5tiniscool";  // Your root password
 $dbname = "CAT1";

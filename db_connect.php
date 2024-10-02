@@ -1,7 +1,7 @@
 <?php
 $servername = "102.37.157.159";
 $username = "root";  // Your MySQL root username
-$password = "";  // Your root password
+$password = "@U5tiniscool";  // Your root password
 $dbname = "CAT1";
 
 // Create connection

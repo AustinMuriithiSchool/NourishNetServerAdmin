@@ -1,0 +1,180 @@
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root {
+    --main-color: #29d978;
+    --primary: #f0fff7;
+    --black: #141414;
+    --white: #fff;
+    --bg: #f2f2f2;
+    --light-black: #666;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: var(--primary);
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+}
+
+/* Main Section */
+section {
+    padding: 3rem 9%;
+}
+
+.heading {
+    text-align: center;
+    color: var(--main-color);
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    font-size: 4rem;
+}
+
+.food-details .details {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s ease;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.food-details .details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+.food-details .details h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.food-details .details p {
+    font-size: 1.8rem;
+    color: var(--light-black);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.food-details .details ol {
+    list-style: none;
+    counter-reset: step-counter;
+}
+
+.food-details .details ol li {
+    position: relative;
+    font-size: 1.8rem;
+    color: var(--light-black);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.food-details .details ol li:before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    position: absolute;
+    left: 0;
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.food-details .details ol li:first-child {
+    margin-top: 1rem;
+}
+
+.food-details .details ol li:last-child {
+    margin-bottom: 0;
+}
+
+.food-details .details .back-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    color: var(--white);
+    background-color: var(--main-color);
+    border-radius: .5rem;
+    text-align: center;
+    transition: background-color 0.2s;
+    text-decoration: none; /* Ensure no underline */
+}
+
+.food-details .details .back-btn:hover {
+    background-color: #1aa056; /* Adjusted shade for hover effect */
+    cursor: pointer;
+}
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--main-color);
+    color: var(--white);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

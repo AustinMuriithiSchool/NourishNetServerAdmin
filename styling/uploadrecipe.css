@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root {
+    --main-color: #29d978;
+    --primary: #f0fff7;
+    --black: #141414;
+    --white: #fff;
+    --bg: #f2f2f2;
+    --light-black: #666;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+body {
+    background: var(--bg);
+}
+
+.taskbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    padding: 1rem 9%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.taskbar .taskbar-left h1 {
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: var(--main-color);
+}
+
+.taskbar .taskbar-right button {
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color: var(--black);
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.taskbar .taskbar-right button:hover {
+    color: var(--main-color);
+}
+
+.content {
+    max-width: 50rem;
+    margin: 3rem auto;
+    padding: 3rem;
+    background: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    text-align: center;
+    color: var(--main-color);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.content p {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.content form label {
+    font-size: 1.7rem;
+    color: var(--black);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.content form input,
+.content form textarea,
+.content form select {
+    width: 100%;
+    padding: 1rem;
+    border: 0.1rem solid var(--light-black);
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.content form input[type="file"] {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.content form select {
+    height: 5rem;
+}
+
+.content form input[type="submit"] {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    border: 0.1rem solid var(--main-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: var(--main-color);
+    background: transparent;
+    transition: 0.2s;
+}
+
+.content form input[type="submit"]:hover {
+    background: var(--main-color);
+    color: var(--white);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--main-color);
+    color: var(--white);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root {
+    --main-color: #29d978;
+    --primary: #f0fff7;
+    --black: #141414;
+    --white: #fff;
+    --bg: #f2f2f2;
+    --light-black: #666;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 1.2rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+}
+
+.taskbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--primary);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.taskbar .taskbar-left {
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+}
+
+.taskbar .taskbar-left h1 {
+    color: var(--main-color);
+    margin-right: 20px;
+}
+
+.taskbar .taskbar-right a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.taskbar .taskbar-right a:hover {
+    color: #004a8a;
+}
+
+
+.navbar a {
+    font-size: 0.9rem;
+    color: var(--black);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+.content {
+    margin-top: 70px;
+    padding: 20px;
+}
+
+.register-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h2 {
+    color: var(--light-black);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register-container label {
+    display: block;
+    margin-bottom: 5px;
+    color:var(--black);
+}
+
+.register-container input[type="text"],
+.register-container input[type="password"],
+.register-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-container input[type="submit"] {
+    width: 100%;
+    background: var(--main-color);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.register-container input[type="submit"]:hover {
+    background: var(--main-color);
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background:var(--bg);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
+}

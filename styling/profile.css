@@ -1,0 +1,169 @@
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root {
+    --main-color: #29d978;
+    --primary: #f0fff7;
+    --black: #141414;
+    --white: #fff;
+    --bg: #f2f2f2;
+    --light-black: #666;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+/* Header Section */
+.taskbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary);
+    padding: 1rem 9%;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.taskbar-left h1 {
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: var(--main-color);
+}
+
+.taskbar-right button {
+    font-size: 1.7rem;
+    margin-left: 1rem;
+    color: var(--black);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.taskbar-right button:hover {
+    color: var(--main-color);
+}
+
+/* Profile Section */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+
+.profile-info h2 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+/* Recipes Section */
+.recipe-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 2rem;
+}
+
+.recipe-item {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipe-item:hover {
+    transform: translateY(-5px);
+}
+.recipe-item img {
+    max-width: 30%;
+    height: auto;
+    max-height: 150px; /* Adjust the max-height as needed */
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+
+.recipe-details {
+    flex: 1;
+    text-align: left;
+}
+
+.recipe-details h3 {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.recipe-details p {
+    font-size: 1.6rem;
+    color: var(--light-black);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.view-recipe-btn {
+    font-size: 1.6rem;
+    color: var(--white);
+    background-color: var(--main-color);
+    padding: 0.8rem 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.view-recipe-btn:hover {
+    background-color: darken(var(--main-color), 10%);
+}
+
+/* Footer Section */
+.footer {
+    background-color: var(--main-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root {
+    --main-color: #29d978;
+    --primary: #f0fff7;
+    --black: #141414;
+    --white: #fff;
+    --bg: #f2f2f2;
+    --light-black: #666;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+body {
+    background: var(--bg);
+    font-size: 1.6rem; /* Added font-size for body */
+}
+
+.header {
+    background: var(--primary);
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.header .navbar {
+    display: flex;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color: var(--black);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar a i {
+    font-size: 1.8rem; /* Adjust the size as needed */
+    color: var(--black); /* Change the color if needed */
+}
+
+.navbar a {
+    margin-right: 1.5rem; /* Adjust the spacing if needed */
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+}
+
+#toggle-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.toggle-buttons {
+    display: inline-block;
+    border: 0.1rem solid var(--main-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.toggle-button {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    background: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background: var(--main-color);
+    color: var(--white);
+}
+
+.toggle-button.active {
+    background: var(--main-color);
+    color: var(--white);
+}
+
+#feed-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.feed-section {
+    max-width: 800px; /* Adjust the max-width to your desired size */
+    margin: 0 auto; /* Center align the feed section */
+    padding: 0 20px; /* Add padding to the sides if needed */
+}
+
+
+.feed-item {
+    margin-bottom: 20px; /* Adjust the margin-bottom to leave space between items */
+    padding: 20px; /* Optional: Add padding to each item for inner spacing */
+    background-color: var(--white); /* Ensure items have a background if needed */
+    border-radius: 10px; /* Optional: Add rounded corners for a card-like appearance */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box-shadow for depth */
+}
+
+
+.feed-item .profile-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.feed-item .profile-link img {
+    width: 3rem; /* Adjust profile image size */
+    height: 3rem; /* Adjust profile image size */
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.feed-item .profile-link .username {
+    font-size: 1.6rem; /* Adjust username font size */
+    font-weight: bold; /* Adjust username font weight */
+}
+
+.feed-item .item-title {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 1rem 0;
+}
+
+.feed-item .item-description {
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.feed-item .item-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+    /* Adjust width */
+    width: calc(100% + 2rem); /* Example: Increase width by 2rem */
+    margin-left: -1rem; /* Offset for increased width */
+}
+
+
+.feed-item .view-details-button {
+    display: block;
+    padding: 1rem;
+    background: var(--main-color);
+    color: var(--white);
+    text-align: left;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.feed-item .view-details-button:hover {
+    background: var(--white);
+    color: var(--main-color);
+}
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: var(--white);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
